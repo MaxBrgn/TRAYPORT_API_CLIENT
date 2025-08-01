@@ -45,8 +45,6 @@ class TradesEndpoint(BaseEndpoint):
         sequence_id: Optional[int] = None,
         sequence_item_ids: Optional[Union[int, List[int], str]] = None,
         second_sequence_item_id: Optional[int] = None,
-        third_sequence_item_id: Optional[int] = None,
-        fourth_sequence_item_id: Optional[int] = None,
         optional_fields: Optional[List[str]] = None,
         include_private: bool = False,
         routes: Optional[List[str]] = None,
@@ -63,8 +61,6 @@ class TradesEndpoint(BaseEndpoint):
             sequence_id: Sequence ID (required)
             sequence_item_ids: Single ID, list of IDs (max 50), or comma-separated string
             second_sequence_item_id: Second item ID for spreads
-            third_sequence_item_id: Third item ID for ranges
-            fourth_sequence_item_id: Fourth item ID for ranges
             optional_fields: Additional fields to include in response
             include_private: Include private trades
             routes: Filter by specific routes
@@ -122,8 +118,6 @@ class TradesEndpoint(BaseEndpoint):
             "sequence_id": sequence_id,
             "sequence_item_id": sequence_item_ids,
             "second_sequence_item_id": second_sequence_item_id,
-            "third_sequence_item_id": third_sequence_item_id,
-            "fourth_sequence_item_id": fourth_sequence_item_id,
             "optional_fields": optional_fields,
             "include_private": include_private,
             "routes": routes,
@@ -268,8 +262,6 @@ class TradesEndpoint(BaseEndpoint):
         sequence_id: Optional[int] = None,
         sequence_item_id: Optional[int] = None,
         second_sequence_item_id: Optional[int] = None,
-        third_sequence_item_id: Optional[int] = None,
-        fourth_sequence_item_id: Optional[int] = None,
         at: Optional[Union[str, datetime]] = None,
     ) -> Optional[LastTrade]:
         """
@@ -282,8 +274,6 @@ class TradesEndpoint(BaseEndpoint):
             sequence_id: Sequence ID
             sequence_item_id: Sequence item ID
             second_sequence_item_id: Second item ID for spreads
-            third_sequence_item_id: Third item ID for ranges
-            fourth_sequence_item_id: Fourth item ID for ranges
             at: Get last trade at specific time (optional)
             
         Returns:
@@ -297,8 +287,6 @@ class TradesEndpoint(BaseEndpoint):
             "sequence_id": sequence_id,
             "sequence_item_id": sequence_item_id,
             "second_sequence_item_id": second_sequence_item_id,
-            "third_sequence_item_id": third_sequence_item_id,
-            "fourth_sequence_item_id": fourth_sequence_item_id,
         }
         
         if at is not None:

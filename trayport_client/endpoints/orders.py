@@ -34,8 +34,6 @@ class OrdersEndpoint(BaseEndpoint):
         sequence_id: Optional[int] = None,
         sequence_item_id: Optional[int] = None,
         second_sequence_item_id: Optional[int] = None,
-        third_sequence_item_id: Optional[int] = None,
-        fourth_sequence_item_id: Optional[int] = None,
         include_private: bool = False,
         routes: Optional[List[str]] = None,
         optional_fields: Optional[List[str]] = None,
@@ -54,8 +52,6 @@ class OrdersEndpoint(BaseEndpoint):
             sequence_id: Sequence ID
             sequence_item_id: Sequence item ID
             second_sequence_item_id: Second item ID for spreads
-            third_sequence_item_id: Third item ID for ranges
-            fourth_sequence_item_id: Fourth item ID for ranges
             include_private: Include private orders
             routes: Filter by specific routes
             optional_fields: Additional fields (e.g., 'venueCode')
@@ -93,8 +89,6 @@ class OrdersEndpoint(BaseEndpoint):
             "sequence_id": sequence_id,
             "sequence_item_id": sequence_item_id,
             "second_sequence_item_id": second_sequence_item_id,
-            "third_sequence_item_id": third_sequence_item_id,
-            "fourth_sequence_item_id": fourth_sequence_item_id,
             "include_private": include_private,
             "routes": routes,
             "optional_fields": optional_fields,
@@ -129,8 +123,6 @@ class OrdersEndpoint(BaseEndpoint):
         sequence_id: Optional[int] = None,
         sequence_item_id: Optional[int] = None,
         second_sequence_item_id: Optional[int] = None,
-        third_sequence_item_id: Optional[int] = None,
-        fourth_sequence_item_id: Optional[int] = None,
         depth: int = 10,
         max_spread: Optional[float] = None,
         include_private: bool = False,
@@ -151,8 +143,6 @@ class OrdersEndpoint(BaseEndpoint):
             sequence_id: Sequence ID
             sequence_item_id: Sequence item ID
             second_sequence_item_id: Second item ID for spreads
-            third_sequence_item_id: Third item ID for ranges
-            fourth_sequence_item_id: Fourth item ID for ranges
             depth: Number of price levels to return (default 10)
             max_spread: Maximum percentage spread from best bid/ask
             include_private: Include private orders
@@ -191,8 +181,6 @@ class OrdersEndpoint(BaseEndpoint):
             "sequence_id": sequence_id,
             "sequence_item_id": sequence_item_id,
             "second_sequence_item_id": second_sequence_item_id,
-            "third_sequence_item_id": third_sequence_item_id,
-            "fourth_sequence_item_id": fourth_sequence_item_id,
             "depth": depth,
             "max_spread": max_spread,
             "include_private": include_private,

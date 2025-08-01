@@ -111,10 +111,8 @@ class TradesRequest(TrayportBaseModel):
     # Single or multiple sequence items (comma-separated for bulk)
     sequence_item_id: Optional[str] = Field(None, alias="sequenceItemId", description="Single ID or comma-separated IDs")
     
-    # For spread/range contracts
+    # For spread contracts
     second_sequence_item_id: Optional[int] = Field(None, alias="secondSequenceItemId", ge=0)
-    third_sequence_item_id: Optional[int] = Field(None, alias="thirdSequenceItemId", ge=0)
-    fourth_sequence_item_id: Optional[int] = Field(None, alias="fourthSequenceItemId", ge=0)
     
     # Optional parameters
     optional_fields: Optional[List[str]] = Field(None, alias="optionalFields")

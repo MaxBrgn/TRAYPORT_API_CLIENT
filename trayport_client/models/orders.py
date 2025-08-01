@@ -53,10 +53,8 @@ class OrderBookRequest(TrayportBaseModel):
     contract_type: str = Field(..., alias="contractType")
     sequence_item_id: int = Field(..., alias="sequenceItemId", ge=0)
     
-    # For spread/range contracts
+    # For spread contracts
     second_sequence_item_id: Optional[int] = Field(None, alias="secondSequenceItemId", ge=0)
-    third_sequence_item_id: Optional[int] = Field(None, alias="thirdSequenceItemId", ge=0)
-    fourth_sequence_item_id: Optional[int] = Field(None, alias="fourthSequenceItemId", ge=0)
     
     # Optional parameters
     depth: Optional[int] = Field(None, ge=1, description="Order book depth")
